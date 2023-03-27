@@ -5,7 +5,9 @@ using UnityEngine;
 public class Brother : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    
+    //Rigidbody2D playerObject1; 
+   // playerObject1 = GetComponent<Rigidbody2D>();
     public GameObject player;
     public GameObject destination;
     public float speedAi;
@@ -29,4 +31,18 @@ public class Brother : MonoBehaviour
         }
 
     }
+   /* private void OnCollision (Collision other)
+    {
+        if (other.tag == "Jumppoint")
+        {
+            
+            playerObject1.velocity = new Vector2(playerObject1.velocity.x, 0f);
+            playerObject1.AddForce(new Vector2(0.0f, 100.0f));
+        }
+
+
+
+    }
+    */
+
 }
