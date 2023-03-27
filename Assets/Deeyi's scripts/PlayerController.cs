@@ -55,11 +55,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 temp = Vector2.Lerp(cam.transform.position, transform.position, Time.deltaTime);
-        //playerObject.velocity
-        cam.transform.position = new Vector3(temp.x, cam.transform.position.y, cam.transform.position.z);
-        //cam.transform.position
+        Vector2 tempX = Vector2.Lerp(cam.transform.position, transform.position, Time.deltaTime);
 
+        Vector2 tempY = Vector2.Lerp(cam.transform.position, transform.position, Time.deltaTime);
+        //playerObject.velocity
+        cam.transform.position = new Vector3(tempX.x, tempY.y, cam.transform.position.z);
+        //cam.transform.position
+       // cam.transform.position.y
         if (!atEdge)
         {
             if (moving)
