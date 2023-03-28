@@ -16,8 +16,16 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Movement left and right
        Move = Input.GetAxisRaw("Horizontal");
 
        Character.velocity = new Vector2(Move * speed, Character.velocity.y);
+
+        // Jump
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Character.AddForce(new Vector2(0.0f, 100.0f));
+        }
+       
     }
 }
