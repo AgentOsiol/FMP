@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 441937207}
   destination: {fileID: 1813349532}
-  speedAi: 1.77
+  speedAi: 4.2
 --- !u!50 &29300760
 Rigidbody2D:
   serializedVersion: 4
