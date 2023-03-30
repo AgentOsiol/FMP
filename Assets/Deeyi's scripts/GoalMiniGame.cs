@@ -24,7 +24,7 @@ public class GoalMiniGame : MonoBehaviour
         Vector2 directionRight = topRight.transform.position - transform.position;
 
 
-
+       
 
     }
 
