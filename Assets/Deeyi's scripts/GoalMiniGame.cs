@@ -14,21 +14,27 @@ public class GoalMiniGame : MonoBehaviour
     public GameObject topLeft;
     float shootSpeed = 100;
     // Start is called before the first frame update
+    
     void Start()
     {
         ballfizz = GetComponent<Rigidbody2D>();
-    
+        numberpicker = Random.Range(1, 2);
         Debug.Log(numberpicker);
-        numberpicker = Random.Range(0, 2);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        
+        if (numberpicker == 1)
+        {
 
-        
+
+
+        }
+
+
 
         Vector2 directionLeft = topLeft.transform.position - transform.position;
         Vector2 directionRight = topRight.transform.position - transform.position;
