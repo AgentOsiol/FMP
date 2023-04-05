@@ -8,40 +8,58 @@ public class GoalMiniGame : MonoBehaviour
     //public GameObject leftdestination;
     public GameObject footBall;
     public GameObject topRight;
+    bool rightSwitch = false;
+    bool leftSwitch = false;
+    float numberpicker = 0;
     public GameObject topLeft;
     float shootSpeed = 100;
     // Start is called before the first frame update
     void Start()
     {
         ballfizz = GetComponent<Rigidbody2D>();
+    
+        Debug.Log(numberpicker);
+        numberpicker = Random.Range(0, 2);
     }
 
     // Update is called once per frame
     void Update()
     {
 
+        
+
+        
+
         Vector2 directionLeft = topLeft.transform.position - transform.position;
         Vector2 directionRight = topRight.transform.position - transform.position;
+        if (leftSwitch == true)
+        {
+
+            transform.position = Vector2.MoveTowards(this.transform.position, topLeft.transform.position, shootSpeed * Time.deltaTime);
+        }
+        if (rightSwitch == true)
+        {
+
+            transform.position = Vector2.MoveTowards(this.transform.position, topRight.transform.position, shootSpeed * Time.deltaTime);
 
 
-       
+
+        }
 
     }
-
-
     public void shootLeft()
     {
         Debug.Log("L");
         //ballfizz.AddForce(new Vector2(0.0f, 0.1f));
-
-          transform.position = Vector2.MoveTowards(this.transform.position, topLeft.transform.position, shootSpeed * Time.deltaTime);
+        leftSwitch = true;
+          //transform.position = Vector2.MoveTowards(this.transform.position, topLeft.transform.position, shootSpeed * Time.deltaTime);
     }
 
     public void shootRight()
     {
         Debug.Log("R");
-        transform.position = Vector2.MoveTowards(this.transform.position, topRight.transform.position, shootSpeed * Time.deltaTime);
-
+       // transform.position = Vector2.MoveTowards(this.transform.position, topRight.transform.position, shootSpeed * Time.deltaTime);
+        rightSwitch = true;
     }
 
 
