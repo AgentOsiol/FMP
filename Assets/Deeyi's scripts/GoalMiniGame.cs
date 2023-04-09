@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class GoalMiniGame : MonoBehaviour
 {
-    Rigidbody2D ballfizz;
+   
     //public GameObject leftdestination;
     public GameObject footBall;
+    public GameObject keeper;
     public GameObject topRight;
     bool rightSwitch = false;
     bool leftSwitch = false;
@@ -17,8 +18,8 @@ public class GoalMiniGame : MonoBehaviour
     
     void Start()
     {
-        ballfizz = GetComponent<Rigidbody2D>();
-        numberpicker = Random.Range(1, 2);
+        
+        numberpicker = Random.Range(1, 3);
         Debug.Log(numberpicker);
         
     }
@@ -27,12 +28,7 @@ public class GoalMiniGame : MonoBehaviour
     void Update()
     {
 
-        if (numberpicker == 1)
-        {
-
-
-
-        }
+       
 
 
 
@@ -56,9 +52,34 @@ public class GoalMiniGame : MonoBehaviour
     public void shootLeft()
     {
         Debug.Log("L");
-        //ballfizz.AddForce(new Vector2(0.0f, 0.1f));
+        
         leftSwitch = true;
-          //transform.position = Vector2.MoveTowards(this.transform.position, topLeft.transform.position, shootSpeed * Time.deltaTime);
+        
+        if (numberpicker == 1 & leftSwitch == true)
+        {
+
+            Debug.Log("you missed");
+        }
+        else if (numberpicker == 2 & rightSwitch == true)
+        {
+
+            Debug.Log("you missed");
+        }
+        else
+        {
+            Debug.Log("you scored");
+
+        }
+
+        if (numberpicker==1)
+        {
+
+            transform.position = Vector2.MoveTowards(keeper.transform.position, topLeft.transform.position, shootSpeed * Time.deltaTime);
+        }
+        else
+        {
+            transform.position = Vector2.MoveTowards(keeper.transform.position, topRight.transform.position, shootSpeed * Time.deltaTime);
+        }
     }
 
     public void shootRight()
@@ -66,6 +87,32 @@ public class GoalMiniGame : MonoBehaviour
         Debug.Log("R");
        // transform.position = Vector2.MoveTowards(this.transform.position, topRight.transform.position, shootSpeed * Time.deltaTime);
         rightSwitch = true;
+        if (numberpicker == 1 & leftSwitch == true)
+        {
+
+            Debug.Log("you missed");
+        }
+        else if (numberpicker == 2 & rightSwitch == true)
+        {
+
+            Debug.Log("you missed");
+        }
+        else
+        {
+            Debug.Log("you scored");
+
+        }
+
+        if (numberpicker == 1)
+        {
+
+            transform.position = Vector2.MoveTowards(this.transform.position, topLeft.transform.position, shootSpeed * Time.deltaTime);
+        }
+        else
+        {
+            transform.position = Vector2.MoveTowards(this.transform.position, topRight.transform.position, shootSpeed * Time.deltaTime);
+        }
+
     }
 
 
