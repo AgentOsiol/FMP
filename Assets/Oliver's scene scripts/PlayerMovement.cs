@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Character.AddForce(new Vector2(0.0f, 100.0f));
         }
-       
+
+        
+        
     }
 }
