@@ -24,8 +24,8 @@ public class ChatBubble : MonoBehaviour
         textMeshPro.ForceMeshUpdate();
         Vector2 textSize = textMeshPro.GetRenderedValues(false);
 
-        Vector2 padding = new Vector2(1f, 1f);
-        backgroundSpriteRenderer.size = textSize + padding;
+        Vector2 padding = new Vector2(7f, 1f);
+        //backgroundSpriteRenderer.size = textSize + padding;
 
         
     }
