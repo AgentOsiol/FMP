@@ -10,12 +10,12 @@ public class DodgeBall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        rigidbody2D.AddForce (new Vector2(0.0f, 100.0f));
+        rigidbody2D.AddForce (new Vector2(-0.1f, 0.0f));
     }
 }
