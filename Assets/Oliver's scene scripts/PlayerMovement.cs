@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         // Jump
         if (Input.GetKeyDown(KeyCode.W))
         {
-            Character.AddForce(new Vector2(0.0f, 100.0f));
+            Character.AddForce(new Vector2(0.0f, 300.0f));
         }
 
         
