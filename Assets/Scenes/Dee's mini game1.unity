@@ -601,6 +601,9 @@ MonoBehaviour:
   footBall: {fileID: 810038585}
   keeper: {fileID: 1451096953}
   topRight: {fileID: 932423095}
+  rightSwitch: 0
+  leftSwitch: 0
+  numberpicker: 0
   topLeft: {fileID: 936612290}
 --- !u!50 &810038589
 Rigidbody2D:
@@ -776,6 +779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1451096955}
   - component: {fileID: 1451096954}
+  - component: {fileID: 1451096956}
   m_Layer: 0
   m_Name: Keeper
   m_TagString: Untagged
@@ -848,6 +852,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1451096956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451096953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30b75d4d16062140a8f721772944519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topRight: {fileID: 932423095}
+  topLeft: {fileID: 936612290}
 --- !u!1 &1592179417
 GameObject:
   m_ObjectHideFlags: 0

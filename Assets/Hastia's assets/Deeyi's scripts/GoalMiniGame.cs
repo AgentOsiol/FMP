@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class GoalMiniGame : MonoBehaviour
 {
-   
+    Rigidbody2D keeperBod;
     //public GameObject leftdestination;
     public GameObject footBall;
     public GameObject keeper;
     public GameObject topRight;
-    bool rightSwitch = false;
-    bool leftSwitch = false;
-    float numberpicker = 0;
+    public bool rightSwitch = false;
+    public bool leftSwitch = false;
+    public float numberpicker = 0;
     public GameObject topLeft;
     float shootSpeed = 100;
     // Start is called before the first frame update
@@ -20,8 +20,7 @@ public class GoalMiniGame : MonoBehaviour
     {
         
         numberpicker = Random.Range(1, 3);
-        Debug.Log(numberpicker);
-        
+        keeperBod = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -57,7 +56,7 @@ public class GoalMiniGame : MonoBehaviour
         
         if (numberpicker == 1 & leftSwitch == true)
         {
-
+            
             Debug.Log("you missed");
         }
         else if (numberpicker == 2 & rightSwitch == true)
@@ -75,11 +74,17 @@ public class GoalMiniGame : MonoBehaviour
         {
 
             transform.position = Vector2.MoveTowards(keeper.transform.position, topLeft.transform.position, shootSpeed * Time.deltaTime);
+         //   keeperBod.velocity = new Vector2(keeperBod.velocity.x, 0f);
+           // keeperBod.AddForce (new Vector2(0.0f, 100.0f));
         }
         else
         {
             transform.position = Vector2.MoveTowards(keeper.transform.position, topRight.transform.position, shootSpeed * Time.deltaTime);
         }
+    
+    
+        
+    
     }
 
     public void shootRight()
