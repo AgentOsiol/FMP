@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
 
     float myXScale;
 
+    public List<string> items;
+
     int score = 0;
    // Animator myAnim;
     bool isOnGround = false;
@@ -233,6 +235,12 @@ public class PlayerController : MonoBehaviour
         }
 
 
+    }
+
+    public void CollectItem(string itemIn)
+    {
+        int indX = items.IndexOf(itemIn);
+        items.RemoveAt(indX);
     }
 
 }

@@ -7,8 +7,9 @@ public class PickUpScript : MonoBehaviour
 {
     [SerializeField]
     private Text pickUpText;
-    
     private bool pickUpAllowed;
+
+    public string itemType;
     
     // Start is called before the first frame update
     private void Start()
@@ -20,10 +21,9 @@ public class PickUpScript : MonoBehaviour
     private void Update()
     {
         if (pickUpAllowed && Input.GetKeyDown(KeyCode.E))
+        {
             PickUp();
-
-           
-            
+        }       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -46,6 +46,8 @@ public class PickUpScript : MonoBehaviour
 
     private void PickUp()
     {
+        GameObject.Find("Player").GetComponent<PlayerController>().CollectItem(itemType);
+
         Destroy(gameObject);
     }
 }
