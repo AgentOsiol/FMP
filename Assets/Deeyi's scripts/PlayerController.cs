@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     public float movementValueX = 2.0f;
     float jumpHeight = 3f;
-    // public Text scoreText;
+    public Text scoreText;
 
     public Transform cam;
     bool atEdge;
@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-
+       /*
         scoreTimer += Time.deltaTime;
 
         if (scoreTimer >= 0.5f)
@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
             score++;
             scoreTimer = 0f;
         }
-
+        /*
         if (Input.GetKey(KeyCode.LeftShift))
         {
 
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
-
+        */
 
 
 
@@ -155,13 +155,13 @@ public class PlayerController : MonoBehaviour
          }
 
 
-         /*if (transform.position.y <= -6)
-         {
-             Time.timeScale = 0.0f;
-         }*/
+        /*if (transform.position.y <= -6)
+        {
+            Time.timeScale = 0.0f;
+        }*/
 
 
-
+        scoreText.text = score.ToString();
 
 
 
@@ -180,11 +180,11 @@ public class PlayerController : MonoBehaviour
 
 
     }
-   /* private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "PickUp")
         {
-            score += 10;
+            score ++;
             Destroy(collision.gameObject);
         }
 
@@ -192,7 +192,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    */
+    /*
     private void OnTriggerEnter2D(Collider2D other)
     {
         
@@ -237,11 +237,16 @@ public class PlayerController : MonoBehaviour
 
     }
 
+<<<<<<< Updated upstream
     public void CollectItem(string itemIn)
     {
         int indX = items.IndexOf(itemIn);
         items.RemoveAt(indX);
     }
+=======
+    */
+
+>>>>>>> Stashed changes
 
 }
   

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Jumppoint
+  - Ball
+  - CleanUp
+  - PickUp
   layers:
   - Default
   - TransparentFX
