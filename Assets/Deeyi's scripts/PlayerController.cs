@@ -192,6 +192,12 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void CollectItem(string itemIn)
+    {
+        int indX = items.IndexOf(itemIn);
+        items.RemoveAt(indX);
+    }
+
     /*
     private void OnTriggerEnter2D(Collider2D other)
     {

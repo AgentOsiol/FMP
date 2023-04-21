@@ -46,7 +46,7 @@ public class PickUpScript : MonoBehaviour
 
     private void PickUp()
     {
-       // GameObject.Find("Player").GetComponent<PlayerController>().CollectItem(itemType);
+        GameObject.Find("Player").GetComponent<PlayerController>().CollectItem(itemType);
 
         Destroy(gameObject);
     }
