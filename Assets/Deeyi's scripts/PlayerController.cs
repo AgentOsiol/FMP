@@ -237,16 +237,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
-<<<<<<< Updated upstream
     public void CollectItem(string itemIn)
     {
         int indX = items.IndexOf(itemIn);
         items.RemoveAt(indX);
     }
-=======
     */
-
->>>>>>> Stashed changes
-
 }
   
