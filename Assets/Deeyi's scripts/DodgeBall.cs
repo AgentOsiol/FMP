@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class DodgeBall : MonoBehaviour
 {
-    
+    public GameObject restartButton;
     Rigidbody2D rigidbody2D;
     public float ballSpeed = 0.5f;
     // Start is called before the first frame update
@@ -25,7 +27,14 @@ public class DodgeBall : MonoBehaviour
         {
             // Destroy(collision.gameObject);
             Time.timeScale = 0;
+            restartButton.SetActive (true);
         }
+    }
+    public void RestartTheGame(){
+
+        
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 
