@@ -9,7 +9,7 @@ public class PickUpScript : MonoBehaviour
     private Text pickUpText;
     private bool pickUpAllowed;
 
-    public string itemType;
+    //public string itemType;
     
     // Start is called before the first frame update
     private void Start()
@@ -46,7 +46,7 @@ public class PickUpScript : MonoBehaviour
 
     private void PickUp()
     {
-        GameObject.Find("Player").GetComponent<PlayerController>().CollectItem(itemType);
+        //GameObject.Find("Player").GetComponent<PlayerController>().CollectItem(itemType);
 
         Destroy(gameObject);
     }

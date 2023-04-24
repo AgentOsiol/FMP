@@ -192,7 +192,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void CollectItem(string itemIn)
+    /*public void CollectItem(string itemIn)
     {
         int indX = items.IndexOf(itemIn);
         items.RemoveAt(indX);
