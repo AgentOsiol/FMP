@@ -20,10 +20,7 @@ public class PickUpScript : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (pickUpAllowed && Input.GetKeyDown(KeyCode.E))
-        {
-            PickUp();
-        }       
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,7 +28,7 @@ public class PickUpScript : MonoBehaviour
         if (collision.gameObject.name.Equals("Player"))
         {
             pickUpText.gameObject.SetActive(true);
-            pickUpAllowed = true;
+
         }
     }
 
@@ -40,14 +37,9 @@ public class PickUpScript : MonoBehaviour
         if (collision.gameObject.name.Equals("Player"))
         {
             pickUpText.gameObject.SetActive(false);
-            pickUpAllowed = false;
+
         }
     }
 
-    private void PickUp()
-    {
-        //GameObject.Find("Player").GetComponent<PlayerController>().CollectItem(itemType);
 
-        Destroy(gameObject);
-    }
 }

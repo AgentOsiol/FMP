@@ -11,6 +11,11 @@ public class PlayerManager : MonoBehaviour
         ingredientCount++;
     }
 
+    public void UseIngredient()
+    {
+        ingredientCount--;
+    }
+
   
 }
 

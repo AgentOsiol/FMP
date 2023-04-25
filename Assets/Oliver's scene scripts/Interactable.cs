@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
+    private bool pickUpAllowed;
     public bool isInRange;
-    public KeyCode interactKey;
     public UnityEvent interactAction;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,14 +15,37 @@ public class Interactable : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
-        if(isInRange)
+        if (pickUpAllowed && Input.GetKeyDown(KeyCode.E))
         {
-            if(Input.GetKeyDown(interactKey))
-            {
-                interactAction.Invoke();
-            }
+            interactAction.Invoke();
+
+            PickUp();
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name.Equals("Player"))
+        {
+            
+            pickUpAllowed = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name.Equals("Player"))
+        {
+            
+            pickUpAllowed = false;
+        }
+    }
+
+    private void PickUp()
+    {
+        Destroy(gameObject);
     }
 }
