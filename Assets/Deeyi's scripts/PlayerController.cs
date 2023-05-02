@@ -41,12 +41,12 @@ public class PlayerController : MonoBehaviour
    // Animator myAnim;
     bool isOnGround = false;
 
-  //  Animator anim;
+    Animator anim;
     Rigidbody2D playerObject;
     // Start is called before the first frame update
     void Start()
     {
-     //   anim = mySprite.GetComponent<Animator>();
+        anim = mySprite.GetComponent<Animator>();
         playerObject = GetComponent<Rigidbody2D>();
         atEdge = false;
         moving = false;
@@ -124,10 +124,10 @@ public class PlayerController : MonoBehaviour
 
 
         playerObject.velocity = new Vector2(movementValueX * moveSpeed, playerObject.velocity.y);
-
+       // Debug.Log(movementValueX);
        // Debug.Log(playerObject.velocity);
         
-      //  anim.SetFloat("speed", Mathf.Abs(movementValueX));
+        anim.SetFloat("speed", Mathf.Abs(movementValueX));
 
 
          isOnGround = Physics2D.OverlapCircle(groundChecker.transform.position, 1.0f, whatIsGround);
