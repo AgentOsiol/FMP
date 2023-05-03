@@ -1,31 +1,25 @@
 fileFormatVersion: 2
-guid: 6760bec7c13a05f41b3a8d606bf43260
+guid: a95d50a23a8eec04593bd01f57c7d635
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5061845688013811094
-    second: New Drawing (2)_0
+      213: 1353325142268197477
+    second: DEnnis idle_0
   - first:
-      213: 5049991973707618939
-    second: New Drawing (2)_1
+      213: 9129782071566285072
+    second: DEnnis idle_1
   - first:
-      213: -6505243200097685444
-    second: New Drawing (2)_2
+      213: -5098639595685601169
+    second: DEnnis idle_2
   - first:
-      213: -8857333316437248980
-    second: New Drawing (2)_3
+      213: 3784966939920050461
+    second: DEnnis idle_3
   - first:
-      213: 5675224542670232743
-    second: New Drawing (2)_4
+      213: 6696712009933288969
+    second: DEnnis idle_4
   - first:
-      213: 4234414300280020397
-    second: New Drawing (2)_5
-  - first:
-      213: 96633249459419424
-    second: New Drawing (2)_6
-  - first:
-      213: 5739889000649785299
-    second: New Drawing (2)_7
+      213: -6348119252232500882
+    second: DEnnis idle_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Drawing (2)_0
+      name: DEnnis idle_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 377
-        width: 210
-        height: 381
+        x: 0
+        y: 10
+        width: 146
+        height: 330
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69de7ed95d94f3640800000000000000
-      internalID: 5061845688013811094
+      spriteID: 56a3082fb0af7c210800000000000000
+      internalID: 1353325142268197477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Drawing (2)_1
+      name: DEnnis idle_1
       rect:
         serializedVersion: 2
-        x: 243
-        y: 385
-        width: 208
-        height: 339
+        x: 239
+        y: 3
+        width: 165
+        height: 324
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7a9a6fa1fc251640800000000000000
-      internalID: 5049991973707618939
+      spriteID: 01930742c6083be70800000000000000
+      internalID: 9129782071566285072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Drawing (2)_2
+      name: DEnnis idle_2
       rect:
         serializedVersion: 2
-        x: 481
-        y: 380
-        width: 191
-        height: 342
+        x: 468
+        y: 6
+        width: 195
+        height: 324
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c30f6a896cbb8b5a0800000000000000
-      internalID: -6505243200097685444
+      spriteID: f602b6d2d4efd39b0800000000000000
+      internalID: -5098639595685601169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Drawing (2)_3
+      name: DEnnis idle_3
       rect:
         serializedVersion: 2
-        x: 728
-        y: 385
-        width: 141
-        height: 352
+        x: 718
+        y: 4
+        width: 195
+        height: 324
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c247680e64e641580800000000000000
-      internalID: -8857333316437248980
+      spriteID: d192884d067e68430800000000000000
+      internalID: 3784966939920050461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Drawing (2)_4
+      name: DEnnis idle_4
       rect:
         serializedVersion: 2
-        x: 951
-        y: 382
-        width: 210
-        height: 339
+        x: 945
+        y: 0
+        width: 165
+        height: 324
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ac107627a272ce40800000000000000
-      internalID: 5675224542670232743
+      spriteID: 9067a23a7108fec50800000000000000
+      internalID: 6696712009933288969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Drawing (2)_5
+      name: DEnnis idle_5
       rect:
         serializedVersion: 2
-        x: 1170
-        y: 384
-        width: 208
-        height: 340
+        x: 1176
+        y: 0
+        width: 146
+        height: 332
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,50 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dad56080f59a3ca30800000000000000
-      internalID: 4234414300280020397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New Drawing (2)_6
-      rect:
-        serializedVersion: 2
-        x: 1403
-        y: 390
-        width: 194
-        height: 343
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 029358bad6f475100800000000000000
-      internalID: 96633249459419424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New Drawing (2)_7
-      rect:
-        serializedVersion: 2
-        x: 1662
-        y: 388
-        width: 143
-        height: 352
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3dff6e582ae28af40800000000000000
-      internalID: 5739889000649785299
+      spriteID: e690dd28c23f6e7a0800000000000000
+      internalID: -6348119252232500882
       vertices: []
       indices: 
       edges: []

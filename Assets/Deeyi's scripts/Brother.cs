@@ -6,8 +6,8 @@ public class Brother : MonoBehaviour
 {
     // Start is called before the first frame update
     
-    Rigidbody2D playerObject1; 
-   
+    Rigidbody2D playerObject1;
+    Animator anim;
     public GameObject player;
     public GameObject destination;
     public float speedAi;
@@ -15,11 +15,13 @@ public class Brother : MonoBehaviour
     void Start()
     {
          playerObject1 = GetComponent<Rigidbody2D>();
+         anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        float movementValueX = Input.GetAxis("Horizontal");
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = destination.transform.position - transform.position;
 
@@ -29,7 +31,8 @@ public class Brother : MonoBehaviour
             transform.position = Vector2.MoveTowards(this.transform.position, destination.transform.position, speedAi * Time.deltaTime);
 
         }
-
+        anim.SetFloat("speed", Mathf.Abs(movementValueX));
+        Debug.Log(anim.GetFloat("speed"));
     }
     void OnTriggerEnter2D(Collider2D other)
     {
