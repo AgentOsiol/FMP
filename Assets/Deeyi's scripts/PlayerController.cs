@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     float scoreTimer = 0f;
     public LayerMask player;
     public float sprintSpeed = 2.5f;
+    public int SceneNum = 0;
 
     float myXScale;
 
@@ -129,7 +130,7 @@ public class PlayerController : MonoBehaviour
        // Debug.Log(playerObject.velocity);
         
         anim.SetFloat("speed", Mathf.Abs(movementValueX));
-        Debug.Log(anim.GetFloat("speed"));
+      //  Debug.Log(anim.GetFloat("speed"));
        // anim.SetBool("jump", isOnGround == false);
 
 
@@ -145,9 +146,9 @@ public class PlayerController : MonoBehaviour
          else if (Input.GetKeyDown(KeyCode.Space) && doubleJump)
          {
              playerObject.velocity = new Vector2(playerObject.velocity.x, 0f);
-             Debug.Log('d');
-             playerObject.AddForce(new Vector2(0.0f, 100.0f * jumpHeight));
-             doubleJump = false;
+            // Debug.Log('d');
+            playerObject.AddForce(new Vector2(0.0f, 100.0f * jumpHeight));
+            doubleJump = false;
             anim.SetTrigger("jump");
         }
         else
@@ -198,7 +199,11 @@ public class PlayerController : MonoBehaviour
             score ++;
             Destroy(collision.gameObject);
         }
-
+        if (collision.gameObject.tag == "Door")
+        {
+            SceneManager.LoadScene(SceneNum);
+            Debug.Log ("you did it");
+        }
 
 
     }

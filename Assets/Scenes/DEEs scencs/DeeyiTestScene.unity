@@ -473,6 +473,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   sprintSpeed: 2.5
+  SceneNum: 0
   items: []
 --- !u!50 &441937209
 Rigidbody2D:

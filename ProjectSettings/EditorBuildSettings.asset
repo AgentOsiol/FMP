@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/DEEs scencs/Scene1.unity
+    guid: 82f00ae7c15f93d4ab187ed0eae7fccd
+  - enabled: 1
+    path: Assets/Scenes/DEEs scencs/DeeyiTestScene.unity
+    guid: 4646882260376e9429e4fb32f2602316
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1

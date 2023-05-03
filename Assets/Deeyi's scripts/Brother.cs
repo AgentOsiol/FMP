@@ -40,7 +40,13 @@ public class Brother : MonoBehaviour
         {
             Debug.Log("you did it");
             playerObject1.velocity = new Vector2(playerObject1.velocity.x, 0f);
-            playerObject1.AddForce(new Vector2(0.0f, 100.0f));
+            playerObject1.AddForce(new Vector2(300.0f, 300.0f));
+            anim.SetTrigger("jump");
+        }
+        else
+        {
+            anim.ResetTrigger("jump");
+
         }
 
 
