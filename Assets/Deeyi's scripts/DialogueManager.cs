@@ -12,14 +12,18 @@ public class DialogueManager : MonoBehaviour
    // public Animator textBox1;
     public Text nameText;
     public Text dialogueText;
-    public GameObject Wake;
+    public GameObject fireFlies;
+    public GameObject wake;
+    Animator anim;
 
     void Start()
     {
         sentences = new Queue<string>();
-        Wake.SetActive(false);
-        // textBox1 = GetComponentInChildren<Animator>();
+       // wake.SetActive(true);
+        //textBox1 = GetComponentInChildren<Animator>();
         textBox.SetActive(false);
+        anim = GetComponent<Animator>();
+        fireFlies.SetActive(true);
     }
 
 
@@ -29,15 +33,19 @@ public class DialogueManager : MonoBehaviour
         {
             DisplayNextSentence();
         }
+       // Debug.Log();
     }
 
 
 
     public void StartDialogue(Dialogue dialogue)
     {
-       // textBox1.SetBool("Isopen", true);
+       // textBox1.SetTrigger("Isopen");
+       // textBox1.SetTrigger("Isopen");
         Debug.Log("starting a convertion with" + dialogue.name);
+        anim.SetBool("Isopen", true);
         textBox.SetActive(true);
+       // textBox.SetActive(false);
         nameText.text = dialogue.name;
         
         sentences.Clear();
@@ -62,6 +70,7 @@ public class DialogueManager : MonoBehaviour
         {
             EndDialogue();
             return;
+           
 
 
         }
@@ -85,12 +94,14 @@ public class DialogueManager : MonoBehaviour
         {
 
             textBox.SetActive(false);
-            // Debug.Log("End of conversati");
-            //  textBox1.SetBool("Isopen", false);
-            Wake.SetActive(true);
-
+            Debug.Log("End of conversati");
+            // textBox1.SetBool("Isopen", false);
+            // textBox1.set("Isopen");
+            anim.SetBool("Isopen", false);
+            // wake.SetActive(false);
+            fireFlies.SetActive(false);
         }
-          
+
     }
     
     // Update is called once per frame
