@@ -31,8 +31,6 @@ public class PlayerController : MonoBehaviour
     public LayerMask player;
     public float sprintSpeed = 2.5f;
 
-    public GameObject mySprite;
-
     float myXScale;
 
     public List<string> items;
@@ -46,7 +44,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = mySprite.GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         playerObject = GetComponent<Rigidbody2D>();
         atEdge = false;
         moving = false;
@@ -58,6 +56,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Vector2 tempX = Vector2.Lerp(cam.transform.position, transform.position, Time.deltaTime);
+        
+
 
         Vector2 tempY = Vector2.Lerp(cam.transform.position, transform.position, Time.deltaTime);
         //playerObject.velocity
@@ -128,9 +128,10 @@ public class PlayerController : MonoBehaviour
        // Debug.Log(playerObject.velocity);
         
         anim.SetFloat("speed", Mathf.Abs(movementValueX));
+        Debug.Log(anim.GetFloat("speed"));
 
 
-         isOnGround = Physics2D.OverlapCircle(groundChecker.transform.position, 1.0f, whatIsGround);
+        isOnGround = Physics2D.OverlapCircle(groundChecker.transform.position, 1.0f, whatIsGround);
          if (Input.GetKeyDown(KeyCode.Space) && isOnGround == true)
          {
              playerObject.velocity = new Vector2(playerObject.velocity.x, 0f);
