@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     bool atEdge;
     bool moving;
     string dir;
+    bool isjumped;
 
     public GameObject groundChecker;
     public GameObject talkStuff;
@@ -129,6 +130,7 @@ public class PlayerController : MonoBehaviour
         
         anim.SetFloat("speed", Mathf.Abs(movementValueX));
         Debug.Log(anim.GetFloat("speed"));
+       // anim.SetBool("jump", isOnGround == false);
 
 
         isOnGround = Physics2D.OverlapCircle(groundChecker.transform.position, 1.0f, whatIsGround);
@@ -136,6 +138,8 @@ public class PlayerController : MonoBehaviour
          {
              playerObject.velocity = new Vector2(playerObject.velocity.x, 0f);
              playerObject.AddForce(new Vector2(0.0f, 100.0f * jumpHeight));
+             //isjumped = true;
+             anim.SetTrigger("jump");
 
          }
          else if (Input.GetKeyDown(KeyCode.Space) && doubleJump)
@@ -144,7 +148,13 @@ public class PlayerController : MonoBehaviour
              Debug.Log('d');
              playerObject.AddForce(new Vector2(0.0f, 100.0f * jumpHeight));
              doubleJump = false;
-         }
+            anim.SetTrigger("jump");
+        }
+        else
+        {
+            anim.ResetTrigger("jump");
+
+        }
 
          if (isOnGround == true)
          {
