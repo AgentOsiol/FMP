@@ -8,6 +8,9 @@ public class GoalMiniGame : MonoBehaviour
     //public GameObject leftdestination;
     public AudioSource kick ;
     public GameObject footBall;
+    public int wIN;
+    public int lOSE;
+    int result;
     public GameObject keeper;
     public GameObject topRight;
     public bool rightSwitch = false;
@@ -51,7 +54,7 @@ public class GoalMiniGame : MonoBehaviour
         }
 
     }
-    public void shootLeft()
+    public IEnumerator shootLeft()
     {
         //Debug.Log("L");
         kick.Play();
@@ -61,10 +64,12 @@ public class GoalMiniGame : MonoBehaviour
         {
             
             Debug.Log("you missed");
+            
+
         }
         else if (numberpicker == 2 & rightSwitch == true)
         {
-
+            
             Debug.Log("you missed");
         }
         else
@@ -72,7 +77,9 @@ public class GoalMiniGame : MonoBehaviour
             Debug.Log("you scored");
 
         }
+        yield return new WaitForSeconds(5);
 
+        //SceneManager.LoadScene(result);
         if (numberpicker==1)
         {
 
