@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 478530632}
   - component: {fileID: 478530634}
   - component: {fileID: 478530635}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Football Boots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1033,7 +1033,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &960083248
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1504,7 +1504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementValueX: 2
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 797659003}
   cam: {fileID: 668517954}
   groundChecker: {fileID: 76495411}
   talkStuff: {fileID: 918279471}
@@ -1674,7 +1674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1744350967
 RectTransform:
   m_ObjectHideFlags: 0

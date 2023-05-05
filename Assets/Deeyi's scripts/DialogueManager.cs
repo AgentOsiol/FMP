@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     public GameObject fireFlies;
     public GameObject wake;
-    Animator anim;
+  //  Animator anim;
 
     void Start()
     {
@@ -22,7 +22,7 @@ public class DialogueManager : MonoBehaviour
        // wake.SetActive(true);
         //textBox1 = GetComponentInChildren<Animator>();
         textBox.SetActive(false);
-        anim = GetComponent<Animator>();
+       // anim = GetComponent<Animator>();
         fireFlies.SetActive(true);
     }
 
@@ -41,9 +41,10 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
        // textBox1.SetTrigger("Isopen");
+       fireFlies.SetActive(false);
        // textBox1.SetTrigger("Isopen");
         Debug.Log("starting a convertion with" + dialogue.name);
-        anim.SetBool("Isopen", true);
+      // anim.SetBool("Isopen", true);
         textBox.SetActive(true);
        // textBox.SetActive(false);
         nameText.text = dialogue.name;
@@ -66,6 +67,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void DisplayNextSentence ()
     {
+        
         if(sentences.Count == 0)
         {
             EndDialogue();
@@ -97,9 +99,9 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("End of conversati");
             // textBox1.SetBool("Isopen", false);
             // textBox1.set("Isopen");
-            anim.SetBool("Isopen", false);
+          //  anim.SetBool("Isopen", false);
             // wake.SetActive(false);
-            fireFlies.SetActive(false);
+           // fireFlies.SetActive(false);
         }
 
     }
