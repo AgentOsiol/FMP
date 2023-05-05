@@ -172,8 +172,14 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 0.0f;
         }*/
 
+        try
+        {
+            scoreText.text = score.ToString();
+        }
+        catch (System.Exception e)
+        {
 
-        scoreText.text = score.ToString();
+        }
 
 
 
