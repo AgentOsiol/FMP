@@ -476,6 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d9a01839d0f1c49809882bec9d1741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireFlies: {fileID: 1969145201}
   Npc:
     name: Dennis Boots
     sentences:
@@ -625,6 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d9a01839d0f1c49809882bec9d1741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireFlies: {fileID: 1004731426}
   Npc:
     name: Inner Thoughts
     sentences:
@@ -1436,6 +1438,7 @@ MonoBehaviour:
   nameText: {fileID: 1352057087}
   dialogueText: {fileID: 10184841}
   fireFlies: {fileID: 859699253}
+  fireFlies1: {fileID: 0}
   wake: {fileID: 1744350966}
 --- !u!4 &1427643966
 Transform:

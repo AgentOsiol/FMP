@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     bool moving;
     string dir;
     bool isjumped;
-
+    private float camHeight = 0f;
     public GameObject groundChecker;
     public GameObject talkStuff;
     bool talkDistance = false;
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
         Vector2 tempY = Vector2.Lerp(cam.transform.position, transform.position, Time.deltaTime);
         //playerObject.velocity
-        cam.transform.position = new Vector3(tempX.x, tempY.y, cam.transform.position.z);
+        cam.transform.position = new Vector3(tempX.x, tempY.y+ camHeight, cam.transform.position.z);
         //cam.transform.position
        // cam.transform.position.y
         if (!atEdge)

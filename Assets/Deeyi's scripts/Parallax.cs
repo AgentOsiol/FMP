@@ -7,7 +7,7 @@ public class Parallax : MonoBehaviour
     // Start is called before the first frame update
 
 
-    GameObject player;
+    public GameObject player;
     Renderer rend;
     float playerStartPos;
     public float speed = 0.5f;
@@ -15,7 +15,7 @@ public class Parallax : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.Find("player");
+       
         rend = GetComponent<Renderer>();
         playerStartPos = player.transform.position.x;
 

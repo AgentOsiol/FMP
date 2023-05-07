@@ -32,7 +32,7 @@ public class Brother : MonoBehaviour
 
         }
         anim.SetFloat("speed", Mathf.Abs(movementValueX));
-        Debug.Log(anim.GetFloat("speed"));
+      //  Debug.Log(anim.GetFloat("speed"));
     }
     void OnTriggerEnter2D(Collider2D other)
     {
