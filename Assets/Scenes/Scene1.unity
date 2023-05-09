@@ -1294,6 +1294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d9a01839d0f1c49809882bec9d1741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireFlies: {fileID: 452567199}
   Npc:
     name: Inner Thoughts
     sentences:

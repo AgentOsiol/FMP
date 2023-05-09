@@ -1710,10 +1710,8 @@ MonoBehaviour:
   Npc:
     name: Brother
     sentences:
-    - Dennis!! What are you doing here
-    - Come on Mary lets play
-    - But mum just told me
-    - Lets play Football follow me Big sis
+    - "Hah! Told you I'd win!\r"
+    - Aw what?! W
     - 
 --- !u!61 &952164626
 BoxCollider2D:
@@ -1993,7 +1991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1409500851
 RectTransform:
   m_ObjectHideFlags: 0

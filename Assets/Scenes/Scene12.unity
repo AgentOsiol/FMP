@@ -757,8 +757,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kick: {fileID: 1604827742}
   footBall: {fileID: 563502362}
-  wIN: 17
-  lOSE: 21
+  wIN: 13
+  lOSE: 14
   keeper: {fileID: 44745424}
   topRight: {fileID: 23580152}
   rightSwitch: 0
