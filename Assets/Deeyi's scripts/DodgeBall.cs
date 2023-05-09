@@ -7,12 +7,16 @@ using UnityEngine.SceneManagement;
 public class DodgeBall : MonoBehaviour
 {
     public GameObject restartButton;
+    public GameObject continueButton;
+    public int sceneNo = 0;
     Rigidbody2D rigidbody2D;
     public float ballSpeed = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        restartButton.SetActive(false);
+        continueButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,6 +32,7 @@ public class DodgeBall : MonoBehaviour
             // Destroy(collision.gameObject);
             Time.timeScale = 0;
             restartButton.SetActive (true);
+            continueButton.SetActive(true);
         }
     }
     public void RestartTheGame(){
@@ -35,6 +40,11 @@ public class DodgeBall : MonoBehaviour
         
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void ContinueGame()
+    {
+        SceneManager.LoadScene(sceneNo);
+
     }
 
 
