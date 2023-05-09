@@ -9,6 +9,7 @@ TagManager:
   - CleanUp
   - PickUp
   - Door
+  - Bowl
   layers:
   - Default
   - TransparentFX
