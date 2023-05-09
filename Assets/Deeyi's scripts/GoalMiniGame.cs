@@ -1,12 +1,12 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GoalMiniGame : MonoBehaviour
 {
     //Rigidbody2D keeperBod;
     //public GameObject leftdestination;
-    public AudioSource kick ;
+    public AudioSource kick;
     public GameObject footBall;
     public int wIN;
     public int lOSE;
@@ -14,26 +14,26 @@ public class GoalMiniGame : MonoBehaviour
     public GameObject keeper;
     public GameObject topRight;
     public bool rightSwitch = false;
-    public GameObject rightButton; 
+    public GameObject rightButton;
     public GameObject leftButton;
     public bool leftSwitch = false;
     public float numberpicker = 0;
     public GameObject topLeft;
     float shootSpeed = 100;
     // Start is called before the first frame update
-    
+
     void Start()
     {
-        
+
         numberpicker = Random.Range(1, 3);
-       // keeperBod = GetComponent<Rigidbody2D>();
+        // keeperBod = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-       
+
 
 
 
@@ -59,68 +59,76 @@ public class GoalMiniGame : MonoBehaviour
         //Debug.Log("L");
         kick.Play();
         leftSwitch = true;
-        
+
         if (numberpicker == 1 & leftSwitch == true)
         {
-            
-            Debug.Log("you missed");
-            
 
+            Debug.Log("you missed");
+
+            result = lOSE;
         }
         else if (numberpicker == 2 & rightSwitch == true)
         {
-            
+
             Debug.Log("you missed");
+            result = lOSE;
         }
         else
         {
             Debug.Log("you scored");
+            result = wIN;
 
         }
-        yield return new WaitForSeconds(5);
-
-        //SceneManager.LoadScene(result);
-        if (numberpicker==1)
+        yield return new WaitForSeconds(2);
+        rightButton.SetActive(false);
+        leftButton.SetActive(false);
+        SceneManager.LoadScene(result);
+        if (numberpicker == 1)
         {
 
             transform.position = Vector2.MoveTowards(keeper.transform.position, topLeft.transform.position, shootSpeed * Time.deltaTime);
-         //   keeperBod.velocity = new Vector2(keeperBod.velocity.x, 0f);
-           // keeperBod.AddForce (new Vector2(0.0f, 100.0f));
+            //   keeperBod.velocity = new Vector2(keeperBod.velocity.x, 0f);
+            // keeperBod.AddForce (new Vector2(0.0f, 100.0f));
         }
         else
         {
             transform.position = Vector2.MoveTowards(keeper.transform.position, topRight.transform.position, shootSpeed * Time.deltaTime);
         }
-    
-    
-        rightButton.SetActive (false);
-        leftButton.SetActive (false);
-    
+
+
+        
+
     }
 
-    public void shootRight()
+    public IEnumerator shootRight()
     {
-      //  Debug.Log("R");
-       // transform.position = Vector2.MoveTowards(this.transform.position, topRight.transform.position, shootSpeed * Time.deltaTime);
+        //  Debug.Log("R");
+        // transform.position = Vector2.MoveTowards(this.transform.position, topRight.transform.position, shootSpeed * Time.deltaTime);
         kick.Play();
-        
+
         rightSwitch = true;
 
         if (numberpicker == 1 & leftSwitch == true)
         {
 
             Debug.Log("you missed");
+            result = lOSE;
         }
         else if (numberpicker == 2 & rightSwitch == true)
         {
 
             Debug.Log("you missed");
+            result = lOSE;
         }
         else
         {
             Debug.Log("you scored");
-
+            result = wIN;
         }
+        rightButton.SetActive(false);
+        leftButton.SetActive(false);
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(result);
 
         if (numberpicker == 1)
         {
@@ -131,13 +139,16 @@ public class GoalMiniGame : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(this.transform.position, topRight.transform.position, shootSpeed * Time.deltaTime);
         }
-        rightButton.SetActive (false);
-        leftButton.SetActive (false);
-
-    
-    
-    
+        
     }
 
+    public void CallLeft()
+    {
+        StartCoroutine(shootLeft());
+    }
+    public void CallRight()
+    {
+        StartCoroutine(shootRight());
+    }
 
 }
