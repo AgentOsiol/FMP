@@ -18,8 +18,10 @@ public class PlayerManager : MonoBehaviour
         if (ingredientCount > 5)
         {
             bowl.SetActive(true);
-
-            
+        }
+        else
+        {
+            bowl.SetActive(false);
         }
 
     }

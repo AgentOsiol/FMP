@@ -720,7 +720,7 @@ Transform:
   m_GameObject: {fileID: 652152026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.041, y: -1.224, z: 0}
-  m_LocalScale: {x: 0.13833377, y: 0.13833377, z: 0.069166884}
+  m_LocalScale: {x: 0.13833377, y: 0.13833377, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -1438,7 +1438,6 @@ MonoBehaviour:
   nameText: {fileID: 1352057087}
   dialogueText: {fileID: 10184841}
   fireFlies: {fileID: 859699253}
-  fireFlies1: {fileID: 0}
   wake: {fileID: 1744350966}
 --- !u!4 &1427643966
 Transform:
@@ -1622,7 +1621,7 @@ Transform:
   m_GameObject: {fileID: 1461185103}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.3989, y: -1.48, z: 0}
-  m_LocalScale: {x: 0.498, y: 0.498, z: 0.498}
+  m_LocalScale: {x: 0.498, y: 0.498, z: 1}
   m_Children:
   - {fileID: 76495412}
   - {fileID: 477035909}

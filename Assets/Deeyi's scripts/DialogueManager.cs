@@ -57,13 +57,7 @@ public class DialogueManager : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-
-            DisplayNextSentence();
-
-
-        }
+        DisplayNextSentence();
     }
     public void DisplayNextSentence ()
     {
