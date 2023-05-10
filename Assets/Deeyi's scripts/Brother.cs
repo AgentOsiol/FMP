@@ -5,12 +5,13 @@ using UnityEngine;
 public class Brother : MonoBehaviour
 {
     // Start is called before the first frame update
-    
+    public GameObject byeBye;
     Rigidbody2D playerObject1;
     Animator anim;
     public GameObject player;
     public GameObject destination;
     public float speedAi;
+    bool byoff= false;
     float distance;
     void Start()
     {
@@ -32,7 +33,12 @@ public class Brother : MonoBehaviour
 
         }
         anim.SetFloat("speed", Mathf.Abs(movementValueX));
-      //  Debug.Log(anim.GetFloat("speed"));
+        //  Debug.Log(anim.GetFloat("speed"));
+        if (byoff == true)
+        {
+            byeBye.SetActive(false);
+            Debug.Log("edfesf");
+        }
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -48,10 +54,17 @@ public class Brother : MonoBehaviour
             anim.ResetTrigger("jump");
 
         }
-
+       
 
 
     }
-    
 
+    public void speedup()
+    {
+        speedAi =speedAi+ 1;
+        
+        byoff = true;
+        Debug.Log("gfsgsdf");
+
+    }
 }

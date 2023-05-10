@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    public int  sceneNum;
+    public int  sceneNum = 6;
+    bool doorTouch=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,14 +16,17 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (doorTouch == true)
+        {
+            SceneManager.LoadScene(sceneNum);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision) 
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(sceneNum);
-            Debug.Log ("you did it");
+            doorTouch = true;
+          //  Debug.Log ("you did it");
         }
     }
 }
