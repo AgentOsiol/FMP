@@ -5,23 +5,12 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     private bool pickUpAllowed;
-    public bool isInRange;
-    public UnityEvent interactAction;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-
     private void Update()
     {
         if (pickUpAllowed && Input.GetKeyDown(KeyCode.E))
         {
-            interactAction.Invoke();
-
             PickUp();
         }
     }
@@ -46,6 +35,7 @@ public class Interactable : MonoBehaviour
 
     private void PickUp()
     {
+        FindObjectOfType<PlayerManager>().ingredientCount++;
         Destroy(gameObject);
     }
 }

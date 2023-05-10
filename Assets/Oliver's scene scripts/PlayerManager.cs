@@ -5,18 +5,29 @@ using UnityEngine.Events;
 
 public class PlayerManager : MonoBehaviour
 {
+    public GameObject bowl;
     public int ingredientCount;
 
-    public void PickupIngredient()
+    private void Start()
     {
-        ingredientCount++;
+        bowl.SetActive(false);
     }
+
+    private void Update()
+    {
+        if (ingredientCount > 5)
+        {
+            bowl.SetActive(true);
+
+            
+        }
+
+    }
+
 
     public void UseIngredient()
     {
-        ingredientCount--;
-    }
 
-  
+    }
 }
 

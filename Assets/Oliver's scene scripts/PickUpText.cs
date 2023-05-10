@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PickUpScript : MonoBehaviour
+public class PickUpText : MonoBehaviour
 {
     [SerializeField]
     private Text pickUpText;
