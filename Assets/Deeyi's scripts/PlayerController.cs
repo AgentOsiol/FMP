@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask player;
     public float sprintSpeed = 2.5f;
     public int SceneNum = 0;
-
+    private bool lockcam = false;
     float myXScale;
 
     public List<string> items;
@@ -51,21 +51,28 @@ public class PlayerController : MonoBehaviour
         atEdge = false;
         moving = false;
         dir = "right";
+       
         myXScale = transform.localScale.x;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 tempX = Vector2.Lerp(cam.transform.position, transform.position, Time.deltaTime);
-        
+        if (lockcam == false)
+        {
+            Vector2 tempX = Vector2.Lerp(cam.transform.position, transform.position, Time.deltaTime);
 
+            Vector2 tempY = Vector2.Lerp(cam.transform.position, transform.position, Time.deltaTime);
+            //playerObject.velocity
+            cam.transform.position = new Vector3(tempX.x, tempY.y + camHeight, cam.transform.position.z);
+            //cam.transform.position
+            // cam.transform.position.y
+        }
+        if(lockcam == true)
+        {
+            cam.transform.position = new Vector3(0,0,0);
 
-        Vector2 tempY = Vector2.Lerp(cam.transform.position, transform.position, Time.deltaTime);
-        //playerObject.velocity
-        cam.transform.position = new Vector3(tempX.x, tempY.y+ camHeight, cam.transform.position.z);
-        //cam.transform.position
-       // cam.transform.position.y
+        }
         if (!atEdge)
         {
             if (moving)
@@ -209,6 +216,11 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(SceneNum);
             Debug.Log ("you did it");
+        }
+        if (collision.gameObject.tag == "Lock cam")
+        {
+            lockcam = true;
+
         }
 
 
