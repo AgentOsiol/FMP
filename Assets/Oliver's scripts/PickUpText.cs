@@ -8,6 +8,7 @@ public class PickUpText : MonoBehaviour
     [SerializeField]
     private Text pickUpText;
     private bool pickUpAllowed;
+    private Text interactText;
 
     //public string itemType;
     
@@ -15,6 +16,8 @@ public class PickUpText : MonoBehaviour
     private void Start()
     {
         pickUpText.gameObject.SetActive(false);
+        interactText.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -28,7 +31,7 @@ public class PickUpText : MonoBehaviour
         if (collision.gameObject.name.Equals("Player"))
         {
             pickUpText.gameObject.SetActive(true);
-
+            interactText.gameObject.SetActive(true);
         }
     }
 
@@ -37,7 +40,7 @@ public class PickUpText : MonoBehaviour
         if (collision.gameObject.name.Equals("Player"))
         {
             pickUpText.gameObject.SetActive(false);
-
+            interactText.gameObject.SetActive(false);
         }
     }
 
