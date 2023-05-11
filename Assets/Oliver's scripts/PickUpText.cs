@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class PickUpText : MonoBehaviour
 {
-    [SerializeField]
-    private Text pickUpText;
+    public bool pickup = false;
+    [SerializeField] private Text pickUpText;
     private bool pickUpAllowed;
-    private Text interactText;
+    [SerializeField] private Text interactText;
 
     //public string itemType;
     
@@ -17,7 +17,6 @@ public class PickUpText : MonoBehaviour
     {
         pickUpText.gameObject.SetActive(false);
         interactText.gameObject.SetActive(false);
-
     }
 
     // Update is called once per frame
@@ -30,8 +29,14 @@ public class PickUpText : MonoBehaviour
     {
         if (collision.gameObject.name.Equals("Player"))
         {
-            pickUpText.gameObject.SetActive(true);
-            interactText.gameObject.SetActive(true);
+            if (pickup == true)
+            {
+                pickUpText.gameObject.SetActive(true);
+            }
+            else
+            {
+                interactText.gameObject.SetActive(true);
+            }
         }
     }
 
@@ -39,8 +44,14 @@ public class PickUpText : MonoBehaviour
     {
         if (collision.gameObject.name.Equals("Player"))
         {
-            pickUpText.gameObject.SetActive(false);
-            interactText.gameObject.SetActive(false);
+            if (pickup == true)
+            {
+                pickUpText.gameObject.SetActive(false);
+            }
+            else
+            {
+                interactText.gameObject.SetActive(false);
+            }
         }
     }
 
