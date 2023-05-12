@@ -1437,7 +1437,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Locate fireflies, press "E" to interact
+  m_Text: 'Locate fireflies, press "E" to interact.
+
+    You can double jump!'
 --- !u!222 &2144606479
 CanvasRenderer:
   m_ObjectHideFlags: 0
