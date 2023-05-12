@@ -1709,12 +1709,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireFlies: {fileID: 952164621}
   Npc:
-    name: Brother
+    name: Dennis and  Mary
     sentences:
-    - Dennis!! What are you doing here
-    - Come on Mary lets play
-    - But mum just told me
-    - Lets play Football follow me Big sis
+    - 
+    - Hey Dennis! Come on ive got homework to do! I cant slack off I've got exams!
+    - 'Oh exams shmemams, come on! Lets play football!! You can study later. '
+    - 'Oh fine fine.. come on then! Ill kick your ass at this! '
+    - No fair how come you get to say that word?!
+    - 'Cuz im older, anyways come on! I need to start my studying soon. '
     - 
 --- !u!61 &952164626
 BoxCollider2D:

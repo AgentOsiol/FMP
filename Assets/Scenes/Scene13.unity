@@ -2240,10 +2240,12 @@ MonoBehaviour:
   Npc:
     name: Brother
     sentences:
-    - "Hah! Told you I'd win!\r"
-    - Aw what?!  We need to play another game you won't win this time.
-    - Yes I will
     - 
+    - Hah! Told you I'd win! little bro!
+    - Aw what?!  Thats not fair! Lets play another game! ill deffo win for sure this
+      time!
+    - 'Okay okay, come on. Lets play dodgeball! '
+    - Heck yeah!
 --- !u!61 &952164626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2330,10 +2332,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireFlies: {fileID: 957969973}
   Npc:
-    name: Brother
+    name: Dennis and Mary
     sentences:
-    - My Balls in that tree lets play Dodgeball
-    - Ok Dennis!!
+    - 
+    - So THATS where my ball went!!
+    - Oh yeah.. hey! I got that for your birthday! Treat things I buy you with respect.
+    - 'Sorry sorry.. but hey! We can play dodgeball like you said! '
+    - 'Sure! '
+    - ...
+    - ...
+    - 'Could you uh..get the ball please Big Sis? '
+    - Got it shortie.
     - 
 --- !u!95 &957969976
 Animator:

@@ -480,12 +480,14 @@ MonoBehaviour:
   Npc:
     name: Dennis Boots
     sentences:
-    - 'These are Denni''s '
-    - 'I remeber when we used to play Football '
-    - We used to always play penalty shootout
-    - He always used to be the Goally
-    - I should go outside this house has too many memories
-    - 
+    - Oh.. These are Dennis's..
+    - Hah.. Of course they've still got mud and gunk on them..
+    - ...
+    - I remember how badly he wanted to play Football with me.. He loved Penalty
+      Shootout to death..
+    - He always wanted to be the goalie too.. no hesitation.
+    - I wish i could go back to that time.. I wish..
+    - ( Go back to a better time? )
 --- !u!1 &557407556
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,9 +755,11 @@ MonoBehaviour:
   Npc:
     name: Inner Thoughts
     sentences:
-    - I should go outside
-    - 'I need some freash air '
-    - Get away from all of this
+    - Awh hey.. i remember this picture..
+    - ...
+    - 'God Dennis.. why did you have to go so soon..? Why..? '
+    - ...
+    - 'Hey.. whats that over there..? '
     - 
 --- !u!61 &652152028
 BoxCollider2D:

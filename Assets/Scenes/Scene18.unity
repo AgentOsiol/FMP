@@ -1251,12 +1251,16 @@ MonoBehaviour:
   Npc:
     name: Brother
     sentences:
-    - I told you you wouldn't win
-    - Thats not fair Dennis
-    - Hey Big sis you might not see me for a while.
-    - What why not?? Your back now
-    - I have to go again. You'll see me sooner than you think Bye Bye Big sis.
     - 
+    - 'Hah! I win this time!!! '
+    - Awh man! Dennis you dont need to throw them so fast!! Theres no way im dodging
+      those!
+    - 'Haha!! '
+    - Alright, now I really need to go and study.
+    - Awwww.. whyyyyyy?
+    - 'Dont whine! I promise ill play with you later! '
+    - Ok! See ya Mary!
+    - Ciao Dennis.
 --- !u!95 &751047358
 Animator:
   serializedVersion: 3

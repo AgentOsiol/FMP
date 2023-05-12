@@ -1548,7 +1548,8 @@ MonoBehaviour:
   Npc:
     name: Inner Thoughts
     sentences:
-    - Mum was really urgent about me coming home, I should get there ASAP
+    - Geez.. Mum sounded really worried on the phone.. i wonder what happened.. i
+      better get inside..
     - 
 --- !u!1 &1352854883
 GameObject:

@@ -1782,18 +1782,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireFlies: {fileID: 126294683}
   Npc:
-    name: Mum
+    name: Mum and Mary
     sentences:
-    - Mum? What's wrong? Are you ok?
-    - 'Mary honey.. The Doctors called.. Dennis didn''t make it..he''s gone..
-
-'
+    - Mum..? Are you ok?! Are you hurt or anything?!
+    - Mary honey.. The Doctors called.. Dennis didn't make it..he's gone..
     - ". . . Wh-What..? Dennis..? Hes.. N-No he was telling me he was feeling better
       last time I saw him!! \r"
     - Honey...
     - He's... actually gone...?
-    - I'm going for some freash air make yourself something to eat
-    - 
+    - ...
+    - ...
+    - I need to go talk to a funeral home Mary.. just.. make yourself something to
+      eat ok..? We will talk about this when i get home..
+    - ...
+    - Make something to eat..? How can i make something to eat.. I dont even want
+      to move..
+    - ...
+    - ... I remember when Dennis used to beg me to make him cake.. man.. what Id
+      do for another day like that..
+    - ( Go back to a better time? )
 --- !u!61 &2100205685
 BoxCollider2D:
   m_ObjectHideFlags: 0
