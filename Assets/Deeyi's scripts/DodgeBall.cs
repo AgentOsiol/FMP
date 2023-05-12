@@ -44,7 +44,7 @@ public class DodgeBall : MonoBehaviour
     public void ContinueGame()
     {
         SceneManager.LoadScene(sceneNo);
-
+        Time.timeScale = 1;
     }
 
 
