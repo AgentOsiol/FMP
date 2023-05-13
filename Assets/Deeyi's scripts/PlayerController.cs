@@ -90,6 +90,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 coll.gameObject.GetComponent<Mum>().TriggerDialogue();
+               // coll.gameObject.TryGetComponent<Mum>().TriggerDialogue();
             }
         }
 
