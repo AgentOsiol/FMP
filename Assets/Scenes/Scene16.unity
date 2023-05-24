@@ -3208,7 +3208,7 @@ MonoBehaviour:
   restartButton: {fileID: 1586636418}
   continueButton: {fileID: 1162719673}
   sceneNo: 19
-  ballSpeed: 2
+  ballSpeed: 1.7
 --- !u!50 &1967054729
 Rigidbody2D:
   serializedVersion: 4
